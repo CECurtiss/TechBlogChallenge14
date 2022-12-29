@@ -1,0 +1,36 @@
+body {
+    background-color:rgb(222, 245, 222);
+}
+
+nav {
+    background-color:rgb(72, 47, 13);
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-left: 70px;
+    font-size: 25px;
+    padding-top: 10px;
+    font: rgb(222, 245, 222);
+}
+
+nav ul li a {
+    text-decoration: none;
+    color:rgb(222, 245, 222);
+}
+
+.maintitle {
+    font-size: 50px;
+    border: 10px solid rgb(222, 245, 222);
+    padding-bottom: 50px 10px;
+    margin-left: 50px;
+    display: inline-block;
+    background-color:rgb(222, 245, 222);
+    color:rgb(72, 47, 13);
+}
