@@ -15,7 +15,10 @@ const hbs = exphbs.create({ helpers });
 
 const sessionConfig = {
   secret: 'adkjg46dpoiqnap381jakg9245130',
-  cookie: {},
+  cookie: {
+    // expires after 12 hrs
+    maxAge: 12 * 60 * 60 * 1000,
+  },
   resave: false,
   saveUninitialized: false,
   store: new SequelizeStore({
