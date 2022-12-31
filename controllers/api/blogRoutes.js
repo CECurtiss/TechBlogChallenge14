@@ -30,7 +30,7 @@ router.put('/:id', withAuth, async (req, res) => {
         res.status(400).json(err);
     }
 })
-
+// delete a blog post
 router.delete('/:id', withAuth, async (req, res) => {
     try {
         const deleteBlogPost = await BlogPost.destroy({

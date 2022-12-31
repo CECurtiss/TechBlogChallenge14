@@ -15,17 +15,19 @@
           <ul>
             <li><a href="homepage">Home</a></li>
             <li><a href="dashboard">Dashboard</a></li>
-            {{#if loggedIn}}
+            {{!-- {{#if loggedIn}} --}}
             <button id="logout" class="btn-no-style">Logout</button>
-            {{#else}}
+            {{!-- {{#else}} --}}
             <li><a href="login">Login</a></li>
-            {{/if}}
+            {{!-- {{/if}} --}}
           </ul>
           <p class="maintitle">The Tech Blog</p>
         </nav>
     </div>
     </header>
-    <p>body</p>
+    <div>
+      {{{ body }}}
+    </div>
     {{#if loggedIn}}
     <script src="/js/logout.js"></script>
     {{/if}}
