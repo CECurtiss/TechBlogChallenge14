@@ -1,8 +1,12 @@
+<div>
+    {{#each allHomePageBlogPosts as |blogPost|}}
 <div class="blog-card">
     <div class="blog-card-header">
-        {{ BlogPost.title }}
+        {{ blogPost.title }}
     </div>
     <div class="blog-card-body">
-        {{ BlogPost.content }}
+        {{ blogPost.content }}
     </div>
+</div>
+{{/each}}
 </div>

@@ -1,29 +1,33 @@
-const router = require('express').Router();
-const { BlogPost, User } = require('../models');
+const router = require("express").Router();
+const { BlogPost, User } = require("../models");
 
 // get all blog posts for homepage
-router.get('/', async (req, res) => {
-    try {
-        const dbBlogPostData = await BlogPost.findAll({
-            include: [
-                {
-                    model: User,
-                    attributes: ['userName'],
-                },
-            ],
-        });
-        const allBlogPosts = dbBlogPostData.map((blogs) =>
-        blogs.get({ plain: true })
-        );
+router.get("/", async (req, res) => {
+  try {
+    const homepageBlogPosts = await BlogPost.findAll({
+      include: [
+        {
+          model: User,
+          attributes: ["userName"],
+        },
+      ],
+    });
+    const allHomePageBlogPosts = homepageBlogPosts.map((blogs) =>
+      blogs.get({ plain: true })
+    );
 
-        res.render('homepage', {
-            allBlogPosts,
-            loggedIn: req.session.loggedIn,
-        })  
-} catch (err) {
+    res.render("homepage", {
+      allHomePageBlogPosts,
+      loggedIn: req.session.loggedIn,
+    });
+  } catch (err) {
     console.log(err);
     res.status(500).json(err);
-}
+  }
+});
+
+router.get('/login', (req,res) => {
+  res.render('login');
 })
 
 module.exports = router;
