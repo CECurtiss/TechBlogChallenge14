@@ -1,10 +1,11 @@
-const loginFormHandler = async (event) => {
-    event.preventDefault();
+
+const loginToBlog = async (event) => {
+   try { event.preventDefault();
 
     // retrieve username & pw from form
-    const username = document.querySelector('#username-login').value.trim();
-    const password = document.querySelector('#password-login').value.trim();
-
+    const username = document.querySelector('#usernamelogin').value
+    const password = document.querySelector('#passwordlogin').value
+    
     if (username && password) {
         const response = await fetch('/api/users/login',
         {
@@ -12,11 +13,16 @@ const loginFormHandler = async (event) => {
             body: JSON.stringify({ username, password }),
             headers: { 'Content-Type': 'application/json'}
             });
-
+            
         if (response.ok) {
             document.location.replace('/');
-        } else {
-            alert('Failed to login');
-        }
-        }
+        } 
+        
     }
+    } catch(err) {
+        console.log('hello')
+    }
+    }
+
+
+    document.querySelector('#loginbtn').addEventListener('click', loginToBlog)

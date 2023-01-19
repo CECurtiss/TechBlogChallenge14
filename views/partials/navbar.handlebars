@@ -4,10 +4,10 @@
           <ul>
             <li><a href="homepage">Home</a></li>
             <li><a href="dashboard">Dashboard</a></li>
-            {{#if loggedIn}}
-            <li><a href="/logout">Logout</a></li>
+            {{#if user.logged_in}}
+            <li><button id='logout'></button>Logout</button></li>
             {{else}}
-            <li><a href="/login">Login</a></li>
+            <li><a href="login">Login</a></li>
             {{/if}}
           </ul>
           <p class="maintitle">The Tech Blog</p>
