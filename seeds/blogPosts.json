@@ -1,20 +1,23 @@
 [
   {
     "id": 1,
+    "datePosted": "2023-01-20",
     "title": "It me",
     "content": "Hello World!",
-    "user_id": 1
+    "userId": 1
   },
   {
     "id": 2,
-    "title": "more about me",
-    "content": "This post is more about me",
-    "user_id": 2
+    "datePosted": "2023-01-20",
+    "title": "Hello!",
+    "content": "This post is about me",
+    "userId": 2
   },
   {
     "id": 3,
+    "datePosted": "2023-01-20",
     "title": "Birds Aren't Real",
     "content": "Tiny robots sent to spy on us",
-    "user_id": 3
+    "userId": 3
   }
 ]
