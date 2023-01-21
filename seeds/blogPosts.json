@@ -1,14 +1,20 @@
 [
   {
+    "id": 1,
     "title": "It me",
-    "content": "Hello World!"
+    "content": "Hello World!",
+    "user_id": 1
   },
   {
+    "id": 2,
     "title": "more about me",
-    "content": "This post is more about me"
+    "content": "This post is more about me",
+    "user_id": 2
   },
   {
+    "id": 3,
     "title": "Birds Aren't Real",
-    "content": "Tiny robots sent to spy on us"
+    "content": "Tiny robots sent to spy on us",
+    "user_id": 3
   }
 ]
