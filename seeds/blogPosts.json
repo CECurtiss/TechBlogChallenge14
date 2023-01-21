@@ -1,14 +1,14 @@
 [
-    {
-        "title": "It me",
-        "content": "Hello World!"
-    },
-    {
-        "title": "more about me",
-        "content": "This post is more about me"
-    },
-    {
-        "title": "Birds Aren't Real",
-        "content": "Tiny robots sent to spy on us"
-    }
+  {
+    "title": "It me",
+    "content": "Hello World!"
+  },
+  {
+    "title": "more about me",
+    "content": "This post is more about me"
+  },
+  {
+    "title": "Birds Aren't Real",
+    "content": "Tiny robots sent to spy on us"
+  }
 ]

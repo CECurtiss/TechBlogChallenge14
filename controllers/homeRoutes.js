@@ -8,7 +8,7 @@ router.get("/", async (req, res) => {
       include: [
         {
           model: User,
-          attributes: ["userName"],
+          attributes: ["username"],
         },
       ],
     });
@@ -26,8 +26,8 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.get('/login', (req,res) => {
-  res.render('login');
-})
+router.get("/login", (req, res) => {
+  res.render("login");
+});
 
 module.exports = router;

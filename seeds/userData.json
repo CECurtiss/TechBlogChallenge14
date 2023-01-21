@@ -1,17 +1,17 @@
 [
-    {
-        "id": 1,
-        "userName": "Barney",
-        "password": "Wholelottalove"
-    },
-    {
-        "id": 2,
-        "userName": "Jerry",
-        "password": "Chunkymonkey"
-    },
-    {
-        "id": 3,
-        "userName": "Dennis",
-        "password": "Mrwilson"
-    }
+  {
+    "id": 1,
+    "username": "Barney",
+    "password": "Wholelottalove"
+  },
+  {
+    "id": 2,
+    "username": "Jerry",
+    "password": "Chunkymonkey"
+  },
+  {
+    "id": 3,
+    "username": "Dennis",
+    "password": "Mrwilson"
+  }
 ]
