@@ -83,3 +83,16 @@ nav ul li a {
     bottom: 10px;
     text-align: center;
 }
+
+#logintitle {
+    background:rgb(72, 47, 13);
+    color:rgb(222, 245, 222);
+    margin-top: 0;
+    padding-left: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.loginfield {
+    padding-left: 20px;
+}
