@@ -2,6 +2,17 @@ const router = require("express").Router();
 const { BlogComment } = require("../../models");
 const withAuth = require("../../utils/auth");
 
+// route to get all comments
+router.get('/', async (req, res) => {
+  try {
+    const allComments = await BlogComment.findAll()
+  res.status(200).json(allComments)
+} catch (err) {
+  res.status(400).json(err)
+}
+})
+
+
 // route to add comment
 router.post("/", withAuth, async (req, res) => {
     try {

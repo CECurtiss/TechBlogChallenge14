@@ -2,6 +2,31 @@ const router = require("express").Router();
 const { BlogPost } = require("../../models");
 const withAuth = require("../../utils/auth");
 
+// route to get all blog posts
+router.get('/', async (req, res) => {
+  try {
+    const allBlogPosts= await BlogPost.findAll()
+  res.status(200).json(allBlogPosts)
+} catch (err) {
+  res.status(400).json(err)
+}
+})
+
+// get one blog post
+router.get('/:id', async (req, res) => {
+  try {
+    const oneBlogPost= await BlogPost.findOne({
+      where: {
+        id: req.params.id,
+      }
+    })
+  res.status(200).json(oneBlogPost)
+} catch (err) {
+  res.status(400).json(err)
+}
+})
+
+
 // route to add blog post
 router.post("/", withAuth, async (req, res) => {
   try {
