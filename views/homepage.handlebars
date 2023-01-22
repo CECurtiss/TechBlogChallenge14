@@ -1,11 +1,18 @@
-<div>
+<div id="homepageblogposts">
   {{#each allHomePageBlogPosts as |blogPost|}}
-    <div class="blog-card">
-      <div class="blog-card-header">
-        {{blogPost.title}}
-      </div>
-      <div class="blog-card-body">
-        {{blogPost.content}}
+    <div class="container">
+      <div class="card">
+        <div class="blog-card-title">
+          <div id="blogposttitle">
+            {{blogPost.title}}
+          </div>
+          <div id="blogpostuserinfo">
+            Posted by {{user.username}}
+          </div>
+        </div>
+        <div class="blog-card-content">
+          {{blogPost.content}}
+        </div>
       </div>
     </div>
   {{/each}}

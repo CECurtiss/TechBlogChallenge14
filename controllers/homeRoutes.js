@@ -11,6 +11,10 @@ router.get("/", withAuth, async (req, res) => {
           model: User,
           attributes: ["username"],
         },
+        {
+          model: BlogComment,
+          attributes: ["content" ]
+        }
       ],
     });
     const allHomePageBlogPosts = homepageBlogPosts.map((blogs) =>

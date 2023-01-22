@@ -34,3 +34,39 @@ nav ul li a {
     background-color:rgb(222, 245, 222);
     color:rgb(72, 47, 13);
 }
+
+.container {
+    border: solid 2px;
+    border-color:rgb(72, 47, 13);
+    margin-top: 15px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.blog-card-title {
+    background-color:rgb(72, 47, 13);
+    font-size: 25px;
+    color: rgb(222, 245, 222);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 30px;
+}
+
+.blog-card-content {
+    font-size: 20px;
+    padding: 15px;
+}
+
+#homepageblogposts {
+    padding-top: 10px;
+}
+
+#blogpostuserinfo {
+    float: right;
+    padding-right: 15px;
+}
+
+#blogposttitle {
+    float: left;
+    padding-left: 15px;
+}
