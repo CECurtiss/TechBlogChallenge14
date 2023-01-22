@@ -64,9 +64,22 @@ nav ul li a {
 #blogpostuserinfo {
     float: right;
     padding-right: 15px;
+    font-size: 15px;
 }
 
 #blogposttitle {
     float: left;
     padding-left: 15px;
+}
+
+#createnewpostbtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#footerbtn {
+    position: fixed;
+    bottom: 10px;
+    text-align: center;
 }

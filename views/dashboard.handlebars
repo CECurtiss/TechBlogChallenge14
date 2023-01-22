@@ -1,17 +1,28 @@
-<div>
+<div id="dashboardblogposts">
   {{#each listAllUserPost as |userPost|}}
-    <div class="blog-card">
-      <div class="blog-card-header">
-        {{userPost.title}}
-      </div>
-      <div class="blog-card-body">
-        {{userPost.content}}
+    <div class="container">
+      <div class="card">
+        <div class="blog-card-title">
+          <div id="blogposttitle">
+            {{userPost.title}}
+          </div>
+          <div id="blogpostuserinfo">
+            Posted:
+            {{userPost.createdAt}}
+          </div>
+        </div>
+        <div class="blog-card-content">
+          {{userPost.content}}
+        </div>
       </div>
     </div>
   {{/each}}
 </div>
-<div>
-  <button id="createnewuserpostbtn">Create New Post</button>
+
+<div id="footerbtn">
+  <div id="createnewpostbtn">
+    <button id="createnewuserpostbtn">Create New Post</button>
+  </div>
 </div>
 
 <script src="./js/dashboard.js"></script>
