@@ -79,9 +79,11 @@ nav ul li a {
 }
 
 #footerbtn {
-    position: fixed;
-    bottom: 10px;
-    text-align: center;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    
 }
 
 #logintitle {
@@ -95,4 +97,35 @@ nav ul li a {
 
 .loginfield {
     padding-left: 20px;
+    font-size: 20px;
+    
+}
+
+#username-login {
+    width: 95%;
+    font-size: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#password-login {
+    width: 95%;
+    font-size: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#loginbuttondiv {
+   padding-top: 10px;
+   padding-bottom: 10px;
+    padding-left: 20px;
+}
+
+#loginbtn {
+    height: 30px;
+    width: 95%;
+}
+
+#signuplink {
+    padding:10px;
 }

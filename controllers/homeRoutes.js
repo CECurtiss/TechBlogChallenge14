@@ -31,8 +31,14 @@ router.get("/", withAuth, async (req, res) => {
   }
 });
 
+// route for login page
 router.get("/login", (req, res) => {
   res.render("login");
+});
+
+// route for signup page
+router.get("/signup", (req, res) => {
+  res.render("signup");
 });
 
 module.exports = router;
