@@ -11,7 +11,7 @@ BlogComment.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    username: {
+    userId: {
       type: DataTypes.INTEGER,
       references: {
         model: "user",
