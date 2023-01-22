@@ -6,8 +6,10 @@ const withAuth = require("../../utils/auth");
 router.post("/", withAuth, async (req, res) => {
   try {
     const newBlogPost = await BlogPost.create({
-      ...req.body,
-      username: req.session.username,
+      title: req.body.title,
+      content: req.body.content,
+      userId: req.session.user_id,
+      username: req.session.username
     });
 
     res.status(200).json(newBlogPost);
@@ -44,5 +46,6 @@ router.delete("/:id", withAuth, async (req, res) => {
     res.status(400).json(err);
   }
 });
+
 
 module.exports = router;
