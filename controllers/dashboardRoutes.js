@@ -2,6 +2,7 @@ const router = require("express").Router();
 const withAuth = require("../utils/auth");
 const { BlogPost, User, BlogComment } = require("../models");
 
+// find all own blog posts
 router.get("/", withAuth, async (req, res) => {
   try {
     const findAllUserPost = await BlogPost.findAll({
@@ -13,6 +14,10 @@ router.get("/", withAuth, async (req, res) => {
           model: User,
           attributes: ["username"],
         },
+        {
+          model: BlogComment,
+          attributes: ["content" ]
+        }
       ],
     });
     const listAllUserPost = findAllUserPost.map((posts) =>
@@ -20,7 +25,7 @@ router.get("/", withAuth, async (req, res) => {
     );
     res.render("dashboard", {
       listAllUserPost,
-      logged_in: req.sessionStore.logged_in,
+      logged_in: req.session.logged_in,
     });
   } catch (err) {
     console.log(err);
@@ -28,9 +33,10 @@ router.get("/", withAuth, async (req, res) => {
   }
 });
 
+// route to load newpost
 router.get("/newpost", withAuth, async (req, res) => {
   try {
-    res.render("addnewpost", { username: req.session.username });
+    res.render("addnewpost", { username: req.session.username, logged_in: req.session.logged_in });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
