@@ -1,12 +1,18 @@
 <div>
-  <form>
+  <div class="container">
     <div>
-      <label for="posttitle">Post Title</label>
-      <input type="text" id="posttitle" name="posttitle" />
+      <h2 id="createnewposttitle">Create New Post</h2>
     </div>
-    <div>
-      <label for="postcontent">Content:</label>
-      <input type="text" id="postcontent" name="postcontent" />
+    <div class="newpostfield">
+      <label for="newposttitlelabel">Title:</label><br />
+      <input id="newposttitleform" type="text" name="newposttitleform" />
     </div>
-  </form>
+    <div class="newpostfield">
+      <label for="newpostcontentlabel">Content:</label><br />
+      <textarea rows="6" columns="40" id="newpostcontentform" type="text" name="newpostcontentform" /></textarea>
+    </div>
+    <div id="newpostbuttondiv">
+      <button id="createnewpostbtn">Create</button>
+    </div>
+  </div>
 </div>

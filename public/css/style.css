@@ -154,3 +154,43 @@ nav ul li a {
      height: 30px;
      width: 95%;
  }
+
+ #createnewposttitle {
+    background:rgb(72, 47, 13);
+    color:rgb(222, 245, 222);
+    margin-top: 0;
+    padding-left: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.newpostfield {
+    padding-left: 20px;
+    font-size: 20px;
+    
+}
+
+#newposttitleform {
+    width: 95%;
+    font-size: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#newpostcontentform {
+    width: 95%;
+    font-size: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#newpostbuttondiv {
+    padding-top: 10px;
+    padding-bottom: 10px;
+     padding-left: 20px;
+ }
+
+ #createnewpostbtn {
+    height: 30px;
+    width: 95%;
+}
