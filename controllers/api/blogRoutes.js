@@ -34,7 +34,6 @@ router.post("/", withAuth, async (req, res) => {
       title: req.body.title,
       content: req.body.content,
       userId: req.session.user_id,
-      username: req.session.username
     });
 
     res.status(200).json(newBlogPost);
