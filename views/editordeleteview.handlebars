@@ -4,6 +4,7 @@
       <h2 id="editposttitle">Edit Post</h2>
     </div>
     <div class="editpostfield">
+      <input type="hidden" name="post-id" value="{{ getAPost.id }}" />
       <label for="editposttitlelabel">Title:</label><br />
       <input id="editposttitleform" value = "{{ getAPost.title }}" type="text" name="editposttitleform" />
     </div>

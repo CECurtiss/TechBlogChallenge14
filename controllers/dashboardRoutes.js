@@ -43,7 +43,7 @@ router.get('/:id', withAuth, async (req, res) => {
         },
         raw:true
       })
-    res.render('singlepostview', {getAPost,
+    res.render('editordeleteview', {getAPost,
       logged_in: req.session.logged_in })
   } catch (err) {
     console.log(err)
