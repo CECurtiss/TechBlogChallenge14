@@ -31,6 +31,24 @@ router.get("/", withAuth, async (req, res) => {
   }
 });
 
+// get one post
+router.get('/:id', withAuth, async (req, res) => {
+  try{
+    const getAHomepagePost = await BlogPost.findOne(
+      {
+        where: {
+          id: req.params.id,
+        },
+        raw:true
+      })
+    res.render('singlepost', {getAHomepagePost,
+      logged_in: req.session.logged_in })
+  } catch (err) {
+    console.log(err)
+    res.status(500).json(err)
+  }
+})
+
 // route for login page
 router.get("/login", (req, res) => {
   res.render("login");

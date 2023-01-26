@@ -1,22 +1,20 @@
 <div id="homepageblogposts">
-  {{#each allHomePageBlogPosts as |blogPost|}}
     <div class="container">
       <div class="card">
         <div class="blog-card-title">
           <div id="blogposttitle">
-            {{blogPost.title}}
+            {{getAHomepagePost.title}}
           </div>
           <div id="blogpostuserinfo">
-            <p>Posted by
-            {{user.username}}
+            Posted by
+            {{getAHomepagePost.username}}
             on
-            {{format_date blogPost.createdAt}}</p>
+            {{format_date getAHomepagePost.createdAt}}
           </div>
         </div>
         <div class="blog-card-content">
-          {{blogPost.content}}
+          {{getAHomepagePost.content}}
         </div>
       </div>
     </div>
-  {{/each}}
 </div>
