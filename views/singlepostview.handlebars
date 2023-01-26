@@ -1,0 +1,23 @@
+<div>
+  <div class="container">
+    <div>
+      <h2 id="editposttitle">Edit Post</h2>
+    </div>
+    <div class="editpostfield">
+      <label for="editposttitlelabel">Title:</label><br />
+      <input id="editposttitleform" value = "{{ getAPost.title }}" type="text" name="editposttitleform" />
+    </div>
+    <div class="editpostfield">
+      <label for="editpostcontentlabel">Content:</label><br />
+      <textarea rows="6" columns="40" id="editpostcontentform" type="text" name="editpostcontentform" />{{ getAPost.content }}</textarea>
+    </div>
+    <div id="updatepostbuttondiv">
+      <button id="updatepostbtn">Update</button>
+    </div>
+    <div id="deletepostbuttondiv">
+      <button id="deletepostbtn">Delete</button>
+    </div>
+  </div>
+</div>
+
+{{!-- <script src="/js/createpost.js"></script> --}}

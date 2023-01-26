@@ -33,6 +33,24 @@ router.get("/", withAuth, async (req, res) => {
   }
 });
 
+// route to load one post
+router.get('/:id', withAuth, async (req, res) => {
+  try{
+    const getAPost = await BlogPost.findOne(
+      {
+        where: {
+          id: req.params.id,
+        },
+        raw:true
+      })
+    res.render('singlepostview', {getAPost,
+      logged_in: req.session.logged_in })
+  } catch (err) {
+    console.log(err)
+    res.status(500).json(err)
+  }
+})
+
 // route to load newpost
 router.get("/newpost", withAuth, async (req, res) => {
   try {
