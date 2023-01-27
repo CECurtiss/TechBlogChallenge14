@@ -4,6 +4,7 @@ const { BlogPost, User, BlogComment } = require("../models");
 
 // find all own blog posts
 router.get("/", withAuth, async (req, res) => {
+  console.log('hello')
   try {
     const findAllUserPost = await BlogPost.findAll({
       where: {
@@ -23,6 +24,7 @@ router.get("/", withAuth, async (req, res) => {
     const listAllUserPost = findAllUserPost.map((posts) =>
       posts.get({ plain: true })
     );
+    console.log(listAllUserPost)
     res.render("dashboard", {
       listAllUserPost,
       logged_in: req.session.logged_in,
@@ -33,8 +35,19 @@ router.get("/", withAuth, async (req, res) => {
   }
 });
 
+// route to load newpost
+router.get("/newpost", withAuth, async (req, res) => {
+  console.log('newpostadd')
+  try {
+    res.render("addnewpost", { username: req.session.username, logged_in: req.session.logged_in });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
 // route to load one post
-router.get('/:id', withAuth, async (req, res) => {
+router.get('/editpost/:id', withAuth, async (req, res) => {
+  console.log('getbyid')
   try{
     const getAPost = await BlogPost.findOne(
       {
@@ -51,14 +64,5 @@ router.get('/:id', withAuth, async (req, res) => {
   }
 })
 
-// route to load newpost
-router.get("/newpost", withAuth, async (req, res) => {
-  try {
-    res.render("addnewpost", { username: req.session.username, logged_in: req.session.logged_in });
-  } catch (err) {
-    console.log(err);
-    res.status(500).json(err);
-  }
-});
 
 module.exports = router;

@@ -4,6 +4,7 @@ const { BlogPost, User, BlogComment } = require("../models");
 
 // get all blog posts for homepage
 router.get("/", withAuth, async (req, res) => {
+  console.log('homeroute')
   try {
     const homepageBlogPosts = await BlogPost.findAll({
       include: [
@@ -31,8 +32,22 @@ router.get("/", withAuth, async (req, res) => {
   }
 });
 
+
+// route for login page
+router.get("/login", (req, res) => {
+  console.log('loginhome')
+  res.render("login");
+});
+
+// route for signup page
+router.get("/signup", (req, res) => {
+  console.log('signuphome')
+  res.render("signup");
+});
+
 // get one post
 router.get('/:id', withAuth, async (req, res) => {
+  console.log('homebyid')
   try{
     const getAHomepagePost = await BlogPost.findOne(
       {
@@ -48,15 +63,4 @@ router.get('/:id', withAuth, async (req, res) => {
     res.status(500).json(err)
   }
 })
-
-// route for login page
-router.get("/login", (req, res) => {
-  res.render("login");
-});
-
-// route for signup page
-router.get("/signup", (req, res) => {
-  res.render("signup");
-});
-
 module.exports = router;
