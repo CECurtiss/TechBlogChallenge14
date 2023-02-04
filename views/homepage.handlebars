@@ -1,22 +1,24 @@
 <div id="homepageblogposts">
   {{#each allHomePageBlogPosts as |blogPost|}}
     <div class="container">
-      <div class="card">
+      <a href="/onepost/{{blogPost.id}}" class="card">
         <div class="blog-card-title">
           <div id="blogposttitle">
             {{blogPost.title}}
           </div>
           <div id="blogpostuserinfo">
-            <p>Posted by
+            Posted by
             {{user.username}}
             on
-            {{format_date blogPost.createdAt}}</p>
+            {{format_date blogPost.createdAt}}
           </div>
         </div>
+      </a>
         <div class="blog-card-content">
           {{blogPost.content}}
         </div>
-      </div>
     </div>
   {{/each}}
 </div>
+
+{{!-- a href="/onepost/{{blogPost.id}}" --}}

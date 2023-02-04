@@ -46,7 +46,7 @@ router.get("/signup", (req, res) => {
 });
 
 // get one post
-router.get('/:id', withAuth, async (req, res) => {
+router.get('/onepost/:id', withAuth, async (req, res) => {
   console.log('homebyid')
   try{
     const getAHomepagePost = await BlogPost.findOne(
