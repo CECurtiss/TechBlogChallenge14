@@ -11,15 +11,12 @@ const createNewComment = async (event) => {
             headers: { "Content-Type": "application/json" },
         });
         
-        // if (response.ok) {
-        //     document.location.replace('/')
-        // } else {
-        //     alert("Failed to comment");
-        // }
+        if (response.ok) {
+            document.location.reload();
+        } else {
+            alert("Failed to comment");
+        }
     }
-    console.log("hello")
-    console.log(blogPostId)
-    console.log(content)
   };
   
   document.querySelector("#commentpostbtn").addEventListener("click", createNewComment);

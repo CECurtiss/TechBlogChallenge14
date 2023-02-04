@@ -1,0 +1,13 @@
+<div class="commentcontainer">
+    {{#each this}}
+    <div class="commenttitle">
+        Posted by
+        {{ user.username }}
+        on
+        {{ format_date blogComment.createdAt }}
+    </div>
+    <div class="commentbody">
+        {{ blogComment.content }}
+    </div>
+    {{/each}}
+</div>
