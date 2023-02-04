@@ -15,6 +15,7 @@ router.get('/', async (req, res) => {
 
 // route to add comment
 router.post("/", withAuth, async (req, res) => {
+  console.log("commentpost")
     try {
       const newCommentPost = await BlogComment.create({
         blogPostId: req.body.blogPostId,
