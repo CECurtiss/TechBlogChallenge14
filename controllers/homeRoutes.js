@@ -54,6 +54,16 @@ router.get('/onepost/:id', withAuth, async (req, res) => {
         where: {
           id: req.params.id,
         },
+        include: [
+          {
+            model: User,
+            attributes: ['username'],
+          },
+          {
+            model: BlogComment,
+            attributes: ['content']
+          }
+        ],
         raw:true
       })
     res.render('singlepost', {getAHomepagePost,

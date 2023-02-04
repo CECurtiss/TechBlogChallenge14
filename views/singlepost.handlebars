@@ -7,7 +7,7 @@
           </div>
           <div id="blogpostuserinfo">
             Posted by
-            {{getAHomepagePost.username}}
+            {{user.username}}
             on
             {{format_date getAHomepagePost.createdAt}}
           </div>
@@ -15,6 +15,19 @@
         <div class="blog-card-content">
           {{getAHomepagePost.content}}
         </div>
+      </div>
+    </div>
+    <div class="container">
+      <div>
+        <h2 id="addcommenttitle"></h2>
+      </div>
+      <div class="commentfield">
+        <input type="hidden" name="commend-id" value="{{ commentPost.id }}" />
+        <label for="commentfieldlabel">Write comment here:</label><br />
+        <textarea rows="6" columns="40" id="commentfieldform" value="{{ commentPost.content }}" type="text" name="commentfieldform"></textarea>
+      </div>
+      <div id="commentpostbuttondiv">
+        <button id="commentpostbtn">Submit Comment</button>
       </div>
     </div>
 </div>
