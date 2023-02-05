@@ -70,6 +70,7 @@ router.get('/onepost/:id', withAuth, async (req, res) => {
         ],
         // raw:true
       })
+      getAHomePagePost = getAHomepagePost.dataValues
     res.render('singlepost', {getAHomepagePost,
       logged_in: req.session.logged_in })
   } catch (err) {

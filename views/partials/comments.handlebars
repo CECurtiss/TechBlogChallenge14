@@ -2,9 +2,9 @@
     {{#each this.getAHomepagePost.BlogComments}}
     <div class="commenttitle">
         Posted by
-        {{ user.username }}
+        {{ user.dataValues.username }}
         on
-        {{ format_date dataValues.createdAt }}
+        {{ format_date BlogComment.dataValues.createdAt }}
     </div>
     <div class="commentbody">
         {{ dataValues.content }}
