@@ -3,8 +3,7 @@ const createNewComment = async (event) => {
     
     const content = document.querySelector("#commentfieldform").value.trim();
     const blogPostId = document.querySelector("input[name='post-id'").value.trim()
-    console.log(blogPostId)
-    console.log(content)
+
     if (content) {
         const response = await fetch("/api/comments/", {
             method: "POST",
