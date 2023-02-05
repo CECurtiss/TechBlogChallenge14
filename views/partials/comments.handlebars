@@ -1,13 +1,13 @@
 <div class="commentcontainer">
-    {{#each this}}
+    {{#each this.getAHomepagePost.BlogComments}}
     <div class="commenttitle">
         Posted by
         {{ user.username }}
         on
-        {{ format_date blogComment.createdAt }}
+        {{ format_date dataValues.createdAt }}
     </div>
     <div class="commentbody">
-        {{ blogcomment.content }}
+        {{ dataValues.content }}
     </div>
     {{/each}}
 </div>

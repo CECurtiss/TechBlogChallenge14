@@ -14,7 +14,7 @@ router.get("/", async (req, res) => {
         },
         {
           model: BlogComment,
-          attributes: ["content" ]
+          attributes: ["content", "createdAt" ]
         }
       ],
     });
@@ -61,9 +61,13 @@ router.get('/onepost/:id', withAuth, async (req, res) => {
           },
           {
             model: BlogComment,
-            attributes: ['content']
+            attributes: ['content'],
+            include: {
+              model: User,
+              attributes: ['username'],
+            }
           }
-        ]
+        ],
         // raw:true
       })
     res.render('singlepost', {getAHomepagePost,

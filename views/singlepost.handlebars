@@ -3,17 +3,17 @@
       <div class="card">
         <div class="blog-card-title">
           <div id="blogposttitle">
-            {{getAHomepagePost.title}}
+            {{getAHomepagePost.dataValues.title}}
           </div>
           <div id="blogpostuserinfo">
             Posted by
-            {{user.username}}
+            {{getAHomepagePost.user.dataValues.username}}
             on
-            {{format_date getAHomepagePost.createdAt}}
+            {{format_date getAHomepagePost.dataValues.createdAt}}
           </div>
         </div>
         <div class="blog-card-content">
-          {{getAHomepagePost.content}}
+          {{getAHomepagePost.dataValues.content}}
         </div>
       </div>
     </div>
