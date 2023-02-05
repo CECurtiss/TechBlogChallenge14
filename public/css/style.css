@@ -25,6 +25,16 @@ nav ul li a {
     color:rgb(222, 245, 222);
 }
 
+nav ul li button {
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    color:rgb(222, 245, 222);
+}
+
 .maintitle {
     font-size: 50px;
     border: 10px solid rgb(222, 245, 222);
