@@ -61,7 +61,7 @@ router.get('/onepost/:id', withAuth, async (req, res) => {
           },
           {
             model: BlogComment,
-            attributes: ['content'],
+            attributes: ['content', 'createdAt'],
             include: {
               model: User,
               attributes: ['username'],
