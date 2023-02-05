@@ -63,8 +63,8 @@ router.get('/onepost/:id', withAuth, async (req, res) => {
             model: BlogComment,
             attributes: ['content']
           }
-        ],
-        raw:true
+        ]
+        // raw:true
       })
     res.render('singlepost', {getAHomepagePost,
       logged_in: req.session.logged_in })

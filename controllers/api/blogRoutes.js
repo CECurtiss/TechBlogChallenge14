@@ -1,11 +1,20 @@
 const router = require("express").Router();
-const { BlogPost } = require("../../models");
+const { BlogPost, User, BlogComment } = require("../../models");
 const withAuth = require("../../utils/auth");
 
 // route to get all blog posts
 router.get('/', async (req, res) => {
   try {
-    const allBlogPosts= await BlogPost.findAll()
+    const allBlogPosts= await BlogPost.findAll({
+      include: [
+        {
+          model: User,
+          attributes: ['username']
+        }, 
+        { model: BlogComment
+        }
+      ]
+    })
   res.status(200).json(allBlogPosts)
 } catch (err) {
   res.status(400).json(err)
@@ -18,7 +27,15 @@ router.get('/:id', async (req, res) => {
     const oneBlogPost= await BlogPost.findOne({
       where: {
         id: req.params.id,
-      }
+      },
+      include: [
+        {
+          model: User,
+          attributes: ['username']
+        }, 
+        { model: BlogComment
+        }
+      ]
     })
   res.status(200).json(oneBlogPost)
 } catch (err) {
